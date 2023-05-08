@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Details</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/userLogin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/af3eeee1f8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <%- include('./_partials/navbar_2') %>
+
+
+    <br><br>
+
+    <div class="wrapper" style="border-radius: 10px;">
+      <div class="left">
+        <img src=<%= startupData.pic_url %> class="img-fluid"  style="min-height: 200px; min-width: 200px;  box-shadow: 10px 10px 15px  #276678; border-radius: 50% ;">
+        <br><br>
+        <h3 style="margin-bottom: 10px; text-transform: uppercase; font-weight: 500;"><b><%= jobAlert.title %></b></h3>
+        <h4 style="font-size:25px"><%= startupData.startup_name %></h4>
+        <h5><%= jobAlert.employment_type %> </h5>
+      </div>
+      <div class="right">
+        <div class="info">
+          <h3 style="color: #1687a7; "><b>About</b></h3>
+          <div class="info-data">
+            <div class="data">
+              <h4 style="font-size:25px">Information</h4>
+              <p style="font-size:18px"><i><%= jobAlert.basic_info %></i></p>
+            </div>
+              <div class="data">
+              <h4 style="font-size:25px">Requirements</h4>
+              <p  style="font-size:18px"><i><%= jobAlert.job_req %></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="projects">
+          <h3 style="color: #1687a7;"><b>Needs</b></h3>
+          <div class="projects-data">
+            <div class="data">
+              <h4 style="font-size:25px">Skills</h4>
+              <p  style="font-size:18px"><ul class="ml-3">
+                <% jobAlert.skills.forEach((item) =>{ %>
+                  <li style="list-style: disc; font-size: 18px;"><i><%= item %></i> </li>
+              <% }) %> 
+              </ul></p>
+            </div>
+              <div class="data">
+              <h4 style="font-size:25px">Shift</h4>
+              <p  style="font-size:18px"> <ul class="ml-3">
+                <% jobAlert.shift.forEach((item) =>{ %>
+                    <li style="list-style: disc; font-size: 18px;"><i><%= item %></i> </li>
+                <% }) %> 
+            </ul></p>
+            </div>
+          </div>
+          <div class="projects-data">
+            <div class="data">
+            <h4 style="font-size:25px">Salary/Stipend</h4>
+              <p  style="font-size:18px"><ul class="ml-3">
+                <% jobAlert.salary.forEach((item) =>{ %>
+                  <li style="list-style: disc; font-size: 18px;"><i><%= item %></i> </li>
+              <% }) %> 
+              </ul></p>
+            </div>
+              <div class="data">
+              <h4 style="font-size:25px">Duration(Months)</h4>
+              <p  style="font-size:18px"> <ul class="ml-3">
+                <% jobAlert.duration.forEach((item) =>{ %>
+                    <li style="list-style: disc; font-size: 18px;"><i><%= item %></i> </li>
+                <% }) %> 
+            </ul></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="social_media">
+          <a href="/login/member"><button class="btn btn-warning" id="apply-btn" style="text-align: right;border-radius: 10px; padding:6px 12px 8px 12px;font-size: 18px;"><b> Apply </b></button></a>
+        </div>
+      </div>
+    
+  </div>
+  <br><br><br>
+
+    <%- include('./_partials/footer') %>
+
+  </body>
+</html>
