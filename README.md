@@ -1,5 +1,3 @@
-# arthgoal-backend
-
 ## Startup Project
 
 ### Currently developed
