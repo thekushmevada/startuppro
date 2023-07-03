@@ -6,6 +6,9 @@
 body {
   font-family: "Roboto Slab", serif;
 }
+.new__footer li{
+  color: #fff;
+}
 .new__footer li a {
   position: relative;
   margin-bottom: 15px;
@@ -63,6 +66,7 @@ body {
 .footer__container {
   background-color: #1687A7;
 }
+
 
 .btn-warning {
   border: initial;
