@@ -18,7 +18,8 @@ const port = process.env.PORT || 3000;
 //    Connect to db
 //    **************
 
-mongoose.connect("mongodb+srv://Ayush-startuppro:Ayush-startuppro@cluster0.bgawn.mongodb.net/Coreexpert_dev?retryWrites=true&w=majority", {
+//mongodb+srv://khmevada2003:LwyusGbLK9owdXJW@cluster0.rv97g4m.mongodb.net/Coreexpert_dev?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://khmevada2003:LwyusGbLK9owdXJW@cluster0.rv97g4m.mongodb.net/Coreexpert_dev?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
