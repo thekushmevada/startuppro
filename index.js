@@ -147,7 +147,7 @@ app.post("/contact", async (req, res) => {
 //get request for the about route
 app.get("/about", (req, res) => {
   try {
-    console.log(req.session);
+    // console.log(req.session);
     const isAuth = (req.session?.isAuth) || (req.session?.isAuthUser) || (req.session?.isAuthCA) || (req.session?.isAuthDeveloper);
     const isAuthenticated = isAuth?true:false;
     res.status(200).render("about", {isAuthenticated});
